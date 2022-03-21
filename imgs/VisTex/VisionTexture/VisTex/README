@@ -1,0 +1,275 @@
+Vision Texture 1.0 (3/25/95)                     
+=============================================================================
+
+This readme file contains a text version of the documentation
+maintained on the Vision Texture homepage.  To obtain the latest
+information about VisTex check the homepage:
+
+http://www-white.media.mit.edu/vismod/imagery/VisionTexture/vistex.html
+
+
+FILES
+------------------------------------------------------------------------------
+
+This distribution of VisTex includes these files:
+
+Images - contains symbolic links to images in the FLAT directory
+	Images/Reference/ 	- reference textures arranged by category
+	Images/Scenes/		- texture scenes 
+	Images/VideoTextures/	- NOT AVAILABLE IN THIS RELEASE
+	Images/Orbits/		- NOT AVAILABLE IN THIS RELEASE
+
+FLAT - image files arranged by size
+
+photobook - photobook annotation information
+
+
+
+DATABASE DESCRIPTION
+-----------------------------------------------------------------------------
+
+	Vision Texture is a collection of texture imagry for the
+computer vision community.  Unlike other texture collections, the
+images in VisTex do not conform to rigid frontal plane perspectives
+and studio lighting conditions.  Instead, the images that make up
+VisTex are taken from many sources including examples of from common 
+("real-world") photography and video. The database has 4 main
+components:
+    
+	- Reference Textures .. 100+ homogeneous textures in frontal
+				and oblique perspectives.
+	- Texture Scenes ...... Images with multiple textures.
+				("real-world") scenes. 
+	- Video Textures ...... Sequences of temporal textures. 
+				(NOT AVAILABLE IN ver 1.0)
+	- Video Orbits ........	Images within a common projective group.
+				(NOT AVAILABLE IN ver 1.0)
+
+
+OBTAINING THE DATABASE
+------------------------------------------------------------------------------
+
+Using FTP
+
+The distribution site for the Vistion Texture database is:
+
+	whitechapel.media.mit.edu
+
+Because of the large size of the database (240 megs uncompressed), the
+distribution is broken up into several smaller files for transfer via
+ftp.  The directory   pub/VisTex   contains these files.  Transfer all
+the compressed tar files along with the extraction script
+(buildVisTex) to your local machine.  The script buildVisTex
+uncompresses the files and restores the VisTex directory structure.
+
+The compressed files for VisTex are large.  We strongly suggest that
+the database be downloaded during none peak hours. 
+
+
+Using the World Wide Web
+
+	You can use your favorite net browser to download the
+database.  To transfer a copy of the compressed Vistex database click
+here.  The compressed files for VisTex are large.  We strongly suggest
+that the database be downloaded during none peak hours. 
+
+
+Installing the Database
+
+To install VisTex you will need the tar and compress unix file
+utilities.  The buildVisTex script unpacks the database files using
+uncompress and tar.  The script should be run from the directory that
+contains the compressed tar files.  
+
+
+ 
+ABOUT THE VISION TEXTURE DATABASE
+-----------------------------------------------------------------------------
+
+About the Sections
+
+The images that make up the VisTex database are stored in a flat
+directory structure according to image size (VisTex/FLAT). The 4
+sections of  the VisTex database are accessed through a directory
+structure that contains symbolc links to the images in the flat
+directories.  By using symbolic links, images may appear in several
+categories, but are stored once. The images in this sense are
+seperated from the classification system.
+
+
+Reference Textures
+
+In the Reference Texture section the images are grouped according to
+what they are.  The (VisTex/Images/Reference) directory contains
+groups such as grass, water, brick, buildings, clouds, . . . etc.
+Within these directories are the symbolc links to the image files
+located in the FLAT directory. 
+
+
+Texture Scenes
+
+The Texture Scenes section is arranged so that the links to all images
+relating to a given scene are in the same directory. The name of the
+scene dirctories come from the dominant textures in the scene. Within
+each scene directory (i.e. VisTex/Images/Scenes/GrassPlantsSky) there
+is a file / symbolic link named context1.ppm. This file is either a
+786x512 or 512x786 image depending on the orientation of the scene.
+The other files in the directory are texture patches (usually
+homogeneous) taken from within the scene. While these detail patches
+are visible within the context scene, they are taken from alternate
+images so that the perspective and lighting varies slightly between
+the context and detail image.
+
+
+Video Textures
+
+This section is not yet available for release in version 1.0. 
+
+
+Video Orbits
+
+This section is not yet available for release in version 1.0. 
+
+
+
+
+GENERAL INFORMATION
+------------------------------------------------------------------------------
+
+File Formats and Image Size
+
+All images in the Vision Texure database are stored as raw ppm (P6)
+files. Currently there are 2 standard sizes for images in VisTex:
+512x512, and 128x128. All images in the Reference Texture section and
+the texture patches from Texture Scenes are available in these sizes.
+The context images for the Texture Scenes section are 786x512 and
+192x128.  Vertically oriented images are available at 512x786 and
+128x192.  In most cases the textures in the database are available by
+special request up to 3072 x 2048.
+
+
+Annotations
+
+Annotations for the images are stored in the header of each ppm image.
+The current annotations for the database include: 
+
+	- content 
+	- lighting 
+	- perspective 
+	- Brodatz replacement number 
+	- source 
+	- notes 
+
+The ppm header this <IMAGE IN HTML CODE> image of tree bark looks like this:
+
+        P6
+        # CONTENTS tree bark
+        # LIGHTING daylight direct right
+        # PERSPECTIVE frontal plane
+        # BRODATZ D13
+        # SRC PCD 3174 2022 0103 #46
+        # NOTES -
+        512 512
+        255
+
+Comment lines in ppm files begin with #. VisTex uses comment lines to
+store image annotations. The capatalized word after # is the
+annotation tag.  Anything following the tag is considered to be the
+value of the tag.  A list of current annotation tags and their
+possible values is available. 
+
+For more information about the ppm file format see the browsers section
+in this document for information about the PBMPlus toolkit. 
+
+
+
+BROWSERS AND SUPPORT PROGRAMS
+----------------------------------------------------------------------------
+
+Photobook
+
+The preferred browser for the Vision Texture database is Photobook.
+Photobook is an interactive browser of image databases which uses
+machine vision to perform queries based on content.  Besides providing
+the capabilities to search on keyword annotations, photobook allows
+the user to perform queries based on "content", as defined by which
+vision algorithm is used. For example, images may be queried based on
+low-level features such as coarseness, color histogram,
+directionality, or periodicity.  Suitable vision algorithms may even
+allow queries based on higher-level features such as the presence of
+certain objects or the spatial relationships of those objects.
+
+The VisTex distribution site maintains the latest additions to
+Photobook's precomputed image data for the database.  This data allows
+the user to create custom groupings and indicies for the database.
+
+
+XV Image Viewer
+
+XV is John Bradley's popular image browser for X. The program allows
+for simple browsing as well as basic image manipulation (filtering,
+color adjustment, and scaling). To obtain a copy of XV see the XV
+distribution site (ftp.cis.upenn.edu), or download the tar and
+compressed distribution (xv-3.10a.tar.Z) of XV directly from this
+page. The compressed XV file is 3.4 megs. 
+
+To load images into XV change into the directory with the images and
+run: xv *.ppm. Since annotations are stored in the ppm file headers
+they are available through the "Image Comments" command under the
+windows menu in XV. 
+
+
+PBMPlus Image Toolkit
+
+PBMPlus is a popular set of image conversion and manipulation programs
+by Jef Poskanzer. The various programs that make up the toolkit work
+on the portable pixel map (ppm) file format which VisTex uses. While
+the kit does not provide a browser, it does have many useful routines
+for handling the images in VisTex. 
+
+The PBMPlus Toolkit is available via anonymous ftp from
+ftp.ee.lbl.gov. The file pbmplus10dec91.tar.Z contains the source for
+the Toolkit which needs to be compiled. To compile PBMPlus to work
+with TIFF images Sam Leffler's TIFF Software package is required.
+
+
+
+COPYRIGHTS
+-----------------------------------------------------------------------------
+Copyright 1995 by the Massachusetts Institute of Technology.
+All rights reserved.
+
+Developed by Rosalind Picard, Chris Graczyk, Steve Mann, Josh Wachman,
+Len Picard, and Lee Campbell at the Media Laboratory, MIT, Cambridge,
+Massachusetts. 
+
+This distribution is approved by Nicholas Negroponte, Director of the
+Media Laboratory, MIT.
+
+Permission to use, copy, modify, publicly display and distribute this
+database and/or the individual images in electronic or print form is
+hereby granted without fee provided that (i) all use of the images is 
+solely for educational and research purposes; (ii) all distribution of
+the images is at no-cost, except for recovery of cost of the media;
+and (iii) the copyright notice and the authors name(s) appear on all
+copies copies, and this permission notice is included with each
+distribution.  You may also publish the images in scholarly journals
+to report research results without further permission from MIT.  Any other
+commercial distribution or publication of the images, in original or
+modified form, requires the prior written permission of MIT. The name
+of MIT and/or the Media Laboratory may not be used in advertising or
+publicity without the prior written permission of MIT. 
+
+------------------------------------------------------------------------------
+3/25/95 - Chris Graczyk - cgraczyk@media.mit.edu
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+#!/bin/csh -f
+# This script extracts the Vision Texture Database 
+# It creates the VisTex directory in whatever directory it is called in.
+# The VisTex .tar.Z files must be in the same directory as this script.
+
+
+echo Uncompressing the VisTex database . . . 
+# Uncompress the directory structure . . .
+echo Starting directory structure 
+uncompress vistex1.0a.A.tar.Z
+tar xf vistex1.0a.A.tar
+
+# Uncompress the files relating to the Reference Texture section
+echo Starting Reference Textures 
+uncompress vistex1.0a.B.tar.Z
+tar xf vistex1.0a.B.tar
+uncompress vistex1.0a.C.tar.Z
+tar xf vistex1.0a.C.tar
+uncompress vistex1.0a.D.tar.Z
+tar xf vistex1.0a.D.tar
+uncompress vistex1.0a.E.tar.Z
+tar xf vistex1.0a.E.tar
+uncompress vistex1.0a.F.tar.Z
+tar xf vistex1.0a.F.tar
+
+# Restore the Texture Scenes
+echo Starting Texture Scenes 
+uncompress vistex1.0a.G.tar.Z
+tar xf vistex1.0a.G.tar
+uncompress vistex1.0a.H.tar.Z
+tar xf vistex1.0a.H.tar
+
