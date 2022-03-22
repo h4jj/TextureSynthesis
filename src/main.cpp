@@ -176,63 +176,13 @@ float l2VectorNorm(std::vector<Color>& nb1, std::vector<Color>& nb2) {
         t += pow(nb1[i].x() - nb2[i].x(), 2);
         t += pow(nb1[i].y() - nb2[i].y(), 2);
         t += pow(nb1[i].z() - nb2[i].z(), 2);
-        // t += (nb1[i] - nb2[i]).norm();
-        // if(flag) {
-        //     std::cout << "t: " << t <<std::endl;
-        //     std::cout << "nb1["<<i<<"]: " << nb1[i] << std::endl;
-        //     std::cout << "nb2["<<i<<"]: " << nb2[i] << std::endl;
-        // }
     }
-
-    // if(flag) exit(0);
     
     return t;
 }
 
 std::vector<Color> constructNeighborhood(Color** data, int m, int n, int ROWS, int COLS, int nbGrid) {
     std::vector<Color> neighborhood = {};
-
-    // Color col0 = {}, col1 = {}, col2 = {}, col3 = {}, col4 = {}, col5 = {}, col6 = {}, col7 = {}, col8 = {}, col9 = {}, col10 = {}, col11 = {}, col12 = {}, col13 = {}, col14 = {}, col15 = {}, col16 = {}, col17 = {};
-    // col0 = data[m][n];
-    // col1 = data[m][n-1 < 0 ? COLS-1 : n-1];
-    // col2 = data[m][n-2 < 0 ? COLS-2 : n-2];
-    // col3 = data[m][n-3 < 0 ? COLS-3 : n-3];
-
-    // col4 = data[m-1 < 0 ? ROWS-1 : m-1][n+3 >= COLS ? 2 : n+3];
-    // col5 = data[m-1 < 0 ? ROWS-1 : m-1][n+2 >= COLS ? 1 : n+2];
-    // col6 = data[m-1 < 0 ? ROWS-1 : m-1][n+1 >= COLS ? 0 : n+1];
-    // col7 = data[m-1 < 0 ? ROWS-1 : m-1][n];
-    // col8 = data[m-1 < 0 ? ROWS-1 : m-1][n-1 < 0 ? COLS-1 : n-1];
-    // col9 = data[m-1 < 0 ? ROWS-1 : m-1][n-2 < 0 ? COLS-2 : n-2];
-    // col10 = data[m-1 < 0 ? ROWS-1 : m-1][n-3 < 0 ? COLS-3 : n-3];
-
-    
-    // col11 = data[m-2 < 0 ? ROWS-2 : m-2][n+3 >= COLS ? 2 : n+3];
-    // col12 = data[m-2 < 0 ? ROWS-2 : m-2][n+2 >= COLS ? 1 : n+2];
-    // col13 = data[m-2 < 0 ? ROWS-2 : m-2][n+1 >= COLS ? 0 : n+1];
-    // col14 = data[m-2 < 0 ? ROWS-2 : m-2][n]; 
-    // col15 = data[m-2 < 0 ? ROWS-2 : m-2][n-1 < 0 ? COLS-1 : n-1];
-    // col16 = data[m-2 < 0 ? ROWS-2 : m-2][n-2 < 0 ? COLS-2 : n-2];
-    // col17 = data[m-2 < 0 ? ROWS-2 : m-2][n-3 < 0 ? COLS-3 : n-3];
-
-    // neighborhood.push_back(col0);
-    // neighborhood.push_back(col1);
-    // neighborhood.push_back(col2);
-    // neighborhood.push_back(col3);
-    // neighborhood.push_back(col4);
-    // neighborhood.push_back(col5);
-    // neighborhood.push_back(col6);
-    // neighborhood.push_back(col7);
-    // neighborhood.push_back(col8);
-    // neighborhood.push_back(col9);
-    // neighborhood.push_back(col10);
-    // neighborhood.push_back(col11);
-    // neighborhood.push_back(col12);
-    // neighborhood.push_back(col13);
-    // neighborhood.push_back(col14);
-    // neighborhood.push_back(col15);
-    // neighborhood.push_back(col16);
-    // neighborhood.push_back(col17);
 
     int minVal = -floor(nbGrid/2);
     int maxVal = -minVal;
@@ -275,16 +225,13 @@ void compareNeighborhoods(std::vector<std::vector<Color>> ipNeighborhoodVect, st
         float t = l2VectorNorm(nb, opNeighborhood);
 
         if(t < minDifference) {
-            // cout << "t: " << t << endl;
             minDifference = t;
             opNeighborhood[0] = nb[0];
         }
     }
-
-    // if(minDifference == 10000000000000000) flag = true;
 }
 
-int main(int argc, char** argv) {
+void singleResolutionSynthesis() {
 
     auto start = std::chrono::steady_clock::now();
     int width, height, bpp;
@@ -296,20 +243,8 @@ int main(int argc, char** argv) {
 
     std::vector<std::vector<Color>> nbVectInput = {};
     std::vector<Color> nbVectOutput = {};
-    
-    // comparison 2D array can be generated before-hand
-    // output image needs to construct neighborhood at each iteration
-    // with newly assigned pixels or else no causality will appear
-    // possible issues to look over are:
-    // 1- neighborhood construction 
-    // 2- l2norm function ? could be modified maybe
-    constructNeighborhoodVector(inputColorData, height, width, nbVectInput, 9);
 
-    // for each pixel in output image
-    // 1- construct neighborhood
-    // 2- compare neighborhood with all neighborhoods in input texture
-    // 3- assign op pixel color based off smallest difference between neighborhoods using l2 norm
-    // 4- repeat
+    constructNeighborhoodVector(inputColorData, height, width, nbVectInput, 9);
 
     for(int m{0}; m<height2; m++) {
         for(int n{0}; n<width2; n++) {
@@ -336,6 +271,12 @@ int main(int argc, char** argv) {
 
     auto end = std::chrono::steady_clock::now();
     cout << "Elapsed time in minutes: " << std::chrono::duration_cast<std::chrono::seconds>((end - start) / 60).count() << " minutes";
+
+}
+
+int main(int argc, char** argv) {
+
+    singleResolutionSynthesis();
 
     return 0;
 }
