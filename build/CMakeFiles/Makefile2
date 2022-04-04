@@ -81,12 +81,12 @@ clean: CMakeFiles/FinalProject.dir/clean
 CMakeFiles/FinalProject.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=1,2 "Built target FinalProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target FinalProject"
 .PHONY : CMakeFiles/FinalProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FinalProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FinalProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles 0
 .PHONY : CMakeFiles/FinalProject.dir/rule

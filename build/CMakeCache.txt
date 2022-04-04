@@ -218,6 +218,9 @@ FinalProject_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 FinalProject_SOURCE_DIR:STATIC=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject
 
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
+
 
 ########################
 # INTERNAL cache entries
@@ -368,4 +371,6 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/usr/local][v4.5.5(4)]
 

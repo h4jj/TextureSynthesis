@@ -83,17 +83,80 @@ CMakeFiles/FinalProject.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/main.cpp -o CMakeFiles/FinalProject.dir/src/main.cpp.s
 
+CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o: ../src/GaussianPyramid.cpp
+CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o -MF CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o.d -o CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o -c /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/GaussianPyramid.cpp
+
+CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/GaussianPyramid.cpp > CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.i
+
+CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/GaussianPyramid.cpp -o CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.s
+
+CMakeFiles/FinalProject.dir/src/KDTree.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/KDTree.cpp.o: ../src/KDTree.cpp
+CMakeFiles/FinalProject.dir/src/KDTree.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProject.dir/src/KDTree.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/KDTree.cpp.o -MF CMakeFiles/FinalProject.dir/src/KDTree.cpp.o.d -o CMakeFiles/FinalProject.dir/src/KDTree.cpp.o -c /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/KDTree.cpp
+
+CMakeFiles/FinalProject.dir/src/KDTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/KDTree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/KDTree.cpp > CMakeFiles/FinalProject.dir/src/KDTree.cpp.i
+
+CMakeFiles/FinalProject.dir/src/KDTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/KDTree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/KDTree.cpp -o CMakeFiles/FinalProject.dir/src/KDTree.cpp.s
+
+CMakeFiles/FinalProject.dir/src/kdtree.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/kdtree.cpp.o: ../src/kdtree.cpp
+CMakeFiles/FinalProject.dir/src/kdtree.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProject.dir/src/kdtree.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/kdtree.cpp.o -MF CMakeFiles/FinalProject.dir/src/kdtree.cpp.o.d -o CMakeFiles/FinalProject.dir/src/kdtree.cpp.o -c /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/kdtree.cpp
+
+CMakeFiles/FinalProject.dir/src/kdtree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/kdtree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/kdtree.cpp > CMakeFiles/FinalProject.dir/src/kdtree.cpp.i
+
+CMakeFiles/FinalProject.dir/src/kdtree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/kdtree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/kdtree.cpp -o CMakeFiles/FinalProject.dir/src/kdtree.cpp.s
+
 # Object files for target FinalProject
 FinalProject_OBJECTS = \
-"CMakeFiles/FinalProject.dir/src/main.cpp.o"
+"CMakeFiles/FinalProject.dir/src/main.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/KDTree.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/kdtree.cpp.o"
 
 # External object files for target FinalProject
 FinalProject_EXTERNAL_OBJECTS =
 
 FinalProject: CMakeFiles/FinalProject.dir/src/main.cpp.o
+FinalProject: CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o
+FinalProject: CMakeFiles/FinalProject.dir/src/KDTree.cpp.o
+FinalProject: CMakeFiles/FinalProject.dir/src/kdtree.cpp.o
 FinalProject: CMakeFiles/FinalProject.dir/build.make
+FinalProject: /usr/local/lib/libopencv_gapi.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_highgui.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_ml.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_objdetect.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_photo.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_stitching.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_video.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_videoio.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_imgcodecs.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_dnn.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_calib3d.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_features2d.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_flann.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_imgproc.so.4.5.5
+FinalProject: /usr/local/lib/libopencv_core.so.4.5.5
 FinalProject: CMakeFiles/FinalProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FinalProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable FinalProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FinalProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

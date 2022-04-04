@@ -129,6 +129,78 @@ FinalProject/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/build
 .PHONY : FinalProject/fast
 
+src/GaussianPyramid.o: src/GaussianPyramid.cpp.o
+.PHONY : src/GaussianPyramid.o
+
+# target to build an object file
+src/GaussianPyramid.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o
+.PHONY : src/GaussianPyramid.cpp.o
+
+src/GaussianPyramid.i: src/GaussianPyramid.cpp.i
+.PHONY : src/GaussianPyramid.i
+
+# target to preprocess a source file
+src/GaussianPyramid.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.i
+.PHONY : src/GaussianPyramid.cpp.i
+
+src/GaussianPyramid.s: src/GaussianPyramid.cpp.s
+.PHONY : src/GaussianPyramid.s
+
+# target to generate assembly for a file
+src/GaussianPyramid.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.s
+.PHONY : src/GaussianPyramid.cpp.s
+
+src/KDTree.o: src/KDTree.cpp.o
+.PHONY : src/KDTree.o
+
+# target to build an object file
+src/KDTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/KDTree.cpp.o
+.PHONY : src/KDTree.cpp.o
+
+src/KDTree.i: src/KDTree.cpp.i
+.PHONY : src/KDTree.i
+
+# target to preprocess a source file
+src/KDTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/KDTree.cpp.i
+.PHONY : src/KDTree.cpp.i
+
+src/KDTree.s: src/KDTree.cpp.s
+.PHONY : src/KDTree.s
+
+# target to generate assembly for a file
+src/KDTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/KDTree.cpp.s
+.PHONY : src/KDTree.cpp.s
+
+src/kdtree.o: src/kdtree.cpp.o
+.PHONY : src/kdtree.o
+
+# target to build an object file
+src/kdtree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/kdtree.cpp.o
+.PHONY : src/kdtree.cpp.o
+
+src/kdtree.i: src/kdtree.cpp.i
+.PHONY : src/kdtree.i
+
+# target to preprocess a source file
+src/kdtree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/kdtree.cpp.i
+.PHONY : src/kdtree.cpp.i
+
+src/kdtree.s: src/kdtree.cpp.s
+.PHONY : src/kdtree.s
+
+# target to generate assembly for a file
+src/kdtree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/kdtree.cpp.s
+.PHONY : src/kdtree.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +234,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... FinalProject"
+	@echo "... src/GaussianPyramid.o"
+	@echo "... src/GaussianPyramid.i"
+	@echo "... src/GaussianPyramid.s"
+	@echo "... src/KDTree.o"
+	@echo "... src/KDTree.i"
+	@echo "... src/KDTree.s"
+	@echo "... src/kdtree.o"
+	@echo "... src/kdtree.i"
+	@echo "... src/kdtree.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

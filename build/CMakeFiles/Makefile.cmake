@@ -23,11 +23,17 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/hajj/share/cmake-3.22/Modules/Compiler/GNU-C.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Compiler/GNU.cmake"
+  "/home/hajj/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
+  "/home/hajj/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Platform/Linux-GNU-C.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Platform/Linux.cmake"
   "/home/hajj/share/cmake-3.22/Modules/Platform/UnixPaths.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVConfig-version.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVConfig.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVModules-release.cmake"
+  "/usr/local/lib/cmake/opencv4/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:
