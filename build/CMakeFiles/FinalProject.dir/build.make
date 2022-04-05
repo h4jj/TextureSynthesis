@@ -140,21 +140,6 @@ FinalProject: CMakeFiles/FinalProject.dir/src/GaussianPyramid.cpp.o
 FinalProject: CMakeFiles/FinalProject.dir/src/KDTree.cpp.o
 FinalProject: CMakeFiles/FinalProject.dir/src/kdtree.cpp.o
 FinalProject: CMakeFiles/FinalProject.dir/build.make
-FinalProject: /usr/local/lib/libopencv_gapi.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_highgui.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_ml.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_objdetect.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_photo.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_stitching.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_video.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_videoio.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_imgcodecs.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_dnn.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_calib3d.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_features2d.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_flann.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_imgproc.so.4.5.5
-FinalProject: /usr/local/lib/libopencv_core.so.4.5.5
 FinalProject: CMakeFiles/FinalProject.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable FinalProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FinalProject.dir/link.txt --verbose=$(VERBOSE)
