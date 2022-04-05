@@ -312,42 +312,41 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
  /usr/include/c++/9/backward/auto_ptr.h \
  /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/GaussianPyramid.h \
  /usr/include/c++/9/iostream \
- /usr/local/include/opencv4/opencv2/imgproc.hpp \
- /usr/local/include/opencv4/opencv2/core.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/core/version.hpp \
- /usr/local/include/opencv4/opencv2/core/hal/interface.h \
- /usr/local/include/opencv4/opencv2/core/cv_cpu_dispatch.h \
- /usr/local/include/opencv4/opencv2/core/base.hpp \
- /usr/local/include/opencv4/opencv2/opencv_modules.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd_wrapper.hpp \
- /usr/local/include/opencv4/opencv2/core/neon_utils.hpp \
- /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp \
- /usr/local/include/opencv4/opencv2/core/check.hpp \
- /usr/local/include/opencv4/opencv2/core/traits.hpp \
- /usr/local/include/opencv4/opencv2/core/matx.hpp \
- /usr/local/include/opencv4/opencv2/core/saturate.hpp \
- /usr/local/include/opencv4/opencv2/core/fast_math.hpp \
- /usr/local/include/opencv4/opencv2/core/types.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/imgproc.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/cvdef.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/hal/interface.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/cv_cpu_dispatch.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/version.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/base.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/opencv_modules.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/cvstd.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/cvstd_wrapper.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/neon_utils.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/vsx_utils.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/check.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/traits.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/matx.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/saturate.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/fast_math.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/types.hpp \
  /usr/include/c++/9/cfloat \
  /usr/lib/gcc/x86_64-linux-gnu/9/include/float.h \
- /usr/local/include/opencv4/opencv2/core/mat.hpp \
- /usr/local/include/opencv4/opencv2/core/bufferpool.hpp \
- /usr/local/include/opencv4/opencv2/core/mat.inl.hpp \
- /usr/local/include/opencv4/opencv2/core/persistence.hpp \
- /usr/local/include/opencv4/opencv2/core/operations.hpp \
- /usr/local/include/opencv4/opencv2/core/cvstd.inl.hpp \
- /usr/local/include/opencv4/opencv2/core/utility.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/mat.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/bufferpool.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/mat.inl.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/persistence.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/operations.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/cvstd.inl.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/utility.hpp \
  /usr/include/c++/9/mutex /usr/include/c++/9/bits/std_mutex.h \
  /usr/include/c++/9/bits/unique_lock.h \
- /usr/local/include/opencv4/opencv2/core/optim.hpp \
- /usr/local/include/opencv4/opencv2/core/ovx.hpp \
- /usr/local/include/opencv4/opencv2/core/cvdef.h \
- /usr/local/include/opencv4/opencv2/imgproc/segmentation.hpp \
- /usr/local/include/opencv4/opencv2/imgcodecs.hpp \
- /usr/local/include/opencv4/opencv2/highgui.hpp \
- /usr/local/include/opencv4/opencv2/videoio.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/optim.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/ovx.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/core/cvdef.h \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/imgcodecs.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/highgui.hpp \
+ /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/dependencies/opencv2/videoio.hpp \
  /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/KDTree.hpp \
  /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src/stb_image.h \
  /usr/include/c++/9/math.h \
