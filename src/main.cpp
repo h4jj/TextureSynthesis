@@ -212,27 +212,28 @@ void singleResolutionSynthesis() {
     auto start = std::chrono::steady_clock::now();
     int width, height, bpp;
     int width2, height2, bpp2;
+    const int nbGrid = 9;
 
-    Color** inputColorData = readImage("../imgs/texture6.png", width, height, bpp);
+    Color** inputColorData = readImage("../imgs/texture1.png", width, height, bpp);
     uint8_t* outputData = readFile("../imgs/noiseTexture.png", width2, height2, bpp2);
     Color** outputColorData = readImage("../imgs/noiseTexture.png", width2, height2, bpp2);
 
     std::vector<std::vector<Color>> nbVectInput = {};
     std::vector<Color> nbVectOutput = {};
 
-    constructNeighborhoodVector(inputColorData, height, width, nbVectInput, 9);
+    constructNeighborhoodVector(inputColorData, height, width, nbVectInput, nbGrid);
 
     for(int m{0}; m<height2; m++) {
         for(int n{0}; n<width2; n++) {
             std::vector<Color> opNeighborhood = {};
-            opNeighborhood = constructNeighborhood(outputColorData, m , n, height2, width2, 9);
+            opNeighborhood = constructNeighborhood(outputColorData, m , n, height2, width2, nbGrid);
             compareNeighborhoods(nbVectInput, opNeighborhood);
             outputColorData[m][n] = opNeighborhood[0];
             nbVectOutput.push_back(opNeighborhood[0]);
         }
 
-        unsigned char tempFinalResult[width2 * height2 * 3] = {};
-        showLiveUpdate(tempFinalResult, outputColorData, width2, height2);       
+        // unsigned char tempFinalResult[width2 * height2 * 3] = {};
+        // showLiveUpdate(tempFinalResult, outputColorData, width2, height2);       
     }
 
     unsigned char outputFinalResult[nbVectOutput.size() * 3] = {};
@@ -246,10 +247,10 @@ void singleResolutionSynthesis() {
         counter += 3;
     }
 
-    stbi_write_png("outputTest.png", width2, height2, 3, outputFinalResult,3*width2);
-
     auto end = std::chrono::steady_clock::now();
-    cout << "Elapsed time in seconds: " << std::chrono::duration_cast<std::chrono::seconds>((end - start)).count() << " seconds";
+    cout << "Elapsed time in seconds: " << std::chrono::duration_cast<std::chrono::seconds>((end - start)).count() << " seconds" << std::endl;
+
+    stbi_write_png("../out/outputTest1.png", width2, height2, 3, outputFinalResult,3*width2);
 
 }
 
@@ -545,12 +546,13 @@ void buildSearchBookFlattened(std::vector<std::vector<double>>& searchbook, std:
 }
 
 void multiResolutionSynthesis() {
-    auto start = std::chrono::steady_clock::now();
-    const char* filename1 = "../imgs/textureSC.png";
+    double searching_time = 0.0f;
+
+    const char* filename1 = "../imgs/texture1.png";
     const char* filename2 = "../imgs/noiseTexture.png";
     const int nbGrid = 5;
     
-    // Mat finalImage;
+    Mat finalImage;
     // Loads an image
     Mat src = imread( cv::samples::findFile( filename1 ) );
     Mat target = imread( cv::samples::findFile( filename2 ) );
@@ -571,9 +573,6 @@ void multiResolutionSynthesis() {
 
     Ga.buildPyramid(Ga.getOriginalImg());
     Gs.buildPyramid(Gs.getOriginalImg());
-    
-    Ga.printPyramid();
-    Gs.printPyramid();
 
     int pyramidLvl = 0;
 
@@ -581,6 +580,8 @@ void multiResolutionSynthesis() {
         
         std::vector<std::vector<cv::Vec3b>> SearchBook;
         buildSearchBook(SearchBook, Ga.pyramid, pyramidLvl, nbGrid);
+
+        auto start2 = std::chrono::steady_clock::now();
         
         cout << "Pyramid Level: " << pyramidLvl << endl;
         for(int j{0}; j<level.rows; j++) {
@@ -594,32 +595,31 @@ void multiResolutionSynthesis() {
 
                 level.at<cv::Vec3b>(j,i) = color;
             }
-
-            Mat finalImage = Gs.pyramid[pyramidLvl];
-            imwrite("finalImage.png", finalImage);
+            
         }        
 
-        // finalImage = Gs.pyramid[pyramidLvl];
+        finalImage = Gs.pyramid[pyramidLvl];
         pyramidLvl++;
 
+        auto end2 = std::chrono::steady_clock::now();
+
+        searching_time += std::chrono::duration_cast<std::chrono::seconds>((end2 - start2)).count();
     }
 
-    // imwrite("finalImage.png", finalImage);
-
-    auto end = std::chrono::steady_clock::now();
-    cout << "Elapsed time in seconds: " << std::chrono::duration_cast<std::chrono::seconds>((end - start)).count() << " seconds";
+    cout << "Elapsed searching time in seconds: " << searching_time << " seconds" << std::endl;
+    imwrite("../out/outputTest2.png", finalImage);
 }
 
 void multiResolutionSynthesisTSVQ() {
     double synthesis_time = 0.0f, searching_time = 0.0f;
     // auto start = std::chrono::steady_clock::now();
-    const char* filename1 = "../imgs/textureSC.png";
+    const char* filename1 = "../imgs/texture1.png";
     const char* filename2 = "../imgs/noiseTexture.png";
-    const int nbGrid = 9;
+    const int nbGrid = 5;
     // Loads an image
     Mat src = imread( cv::samples::findFile( filename1 ) );
     Mat target = imread( cv::samples::findFile( filename2 ) );
-    // Mat finalImage;
+    Mat finalImage;
     // Check if image is loaded fine
     if(src.empty()){
         printf(" Error opening image\n");
@@ -637,9 +637,6 @@ void multiResolutionSynthesisTSVQ() {
 
     Ga.buildPyramid(Ga.getOriginalImg());
     Gs.buildPyramid(Gs.getOriginalImg());
-    
-    Ga.printPyramid();
-    Gs.printPyramid();
 
     int pyramidLvl = 0;
 
@@ -654,6 +651,7 @@ void multiResolutionSynthesisTSVQ() {
 
         auto start2 = std::chrono::steady_clock::now();
 
+        cout << "Pyramid Level: " << pyramidLvl << endl;
         for(int j{0}; j<level.rows; j++) {
             for(int i{0}; i<level.cols; i++) {
                 cv::Vec3b C = FindBestMatchTSVQ(Ga,Gs,pyramidLvl, tree, i, j, nbGrid);
@@ -665,14 +663,15 @@ void multiResolutionSynthesisTSVQ() {
 
                 level.at<cv::Vec3b>(j,i) = color;
             }
+            // if(pyramidLvl != Gs.pyramid.size() -1) {
+            //     std::this_thread::sleep_for(std::chrono::milliseconds(50));
+            // }
 
-            Mat finalImage = Gs.pyramid[pyramidLvl];
-            imwrite("finalImageTSVQ2.png", finalImage);
+            // Mat finalImage = Gs.pyramid[pyramidLvl];
+            // imwrite("finalImageTSVQ2.png", finalImage);
 
-            
-            
         }
-        // finalImage = Gs.pyramid[pyramidLvl];        
+        finalImage = Gs.pyramid[pyramidLvl];        
 
         pyramidLvl++;
 
@@ -681,18 +680,17 @@ void multiResolutionSynthesisTSVQ() {
         searching_time += std::chrono::duration_cast<std::chrono::seconds>((end2 - start2)).count();
     }
 
-    // imwrite("finalImageTSVQ.png", finalImage);
-
     cout << "Elapsed training time in seconds: " << synthesis_time << " seconds" << std::endl;
     cout << "Elapsed searching time in seconds: " << searching_time << " seconds" << std::endl;
+    imwrite("../out/outputTest3.png", finalImage);
 }
 
 
 int main(int argc, char** argv) {
 
-    // singleResolutionSynthesis();
-    // multiResolutionSynthesis();
-    multiResolutionSynthesisTSVQ();
+    singleResolutionSynthesis(); // 9x9
+    multiResolutionSynthesis(); // 5x5
+    multiResolutionSynthesisTSVQ(); // 5x5
 
     return EXIT_SUCCESS;
 }
