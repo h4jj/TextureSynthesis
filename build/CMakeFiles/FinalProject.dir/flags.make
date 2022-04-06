@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/src
+CXX_INCLUDES = -I/home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/dependencies -I/home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/src -I/home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/dependencies/opencv4
 
 CXX_FLAGS = -O3 -DNDEBUG -std=gnu++11
 

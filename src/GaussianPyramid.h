@@ -24,8 +24,8 @@ public:
     void buildPyramid(Mat);
     void reconPyramid();
     void printPyramid();
-    void showEachStage();
-    void showSingleStage(Mat);
+    // void showEachStage();
+    // void showSingleStage(Mat);
     Mat& getOriginalImg() {return original_image;}
 
     std::vector<Mat> pyramid;

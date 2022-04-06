@@ -1,3 +1,3 @@
-/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles/FinalProject.dir
-/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles/edit_cache.dir
-/home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles/rebuild_cache.dir
+/home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build/CMakeFiles/FinalProject.dir
+/home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build/CMakeFiles/edit_cache.dir
+/home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build/CMakeFiles/rebuild_cache.dir

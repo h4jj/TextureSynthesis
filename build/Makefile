@@ -57,10 +57,10 @@ RM = /home/hajj/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hajj/Concordia/Winter-2022/COMP371/FinalProject
+CMAKE_SOURCE_DIR = /home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build
+CMAKE_BINARY_DIR = /home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build/CMakeFiles /home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalProject/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hajj/Concordia/Winter-2022/COMP371/FinalTotal/FinalProject/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -177,30 +177,6 @@ src/KDTree.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/KDTree.cpp.s
 .PHONY : src/KDTree.cpp.s
 
-src/kdtree.o: src/kdtree.cpp.o
-.PHONY : src/kdtree.o
-
-# target to build an object file
-src/kdtree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/kdtree.cpp.o
-.PHONY : src/kdtree.cpp.o
-
-src/kdtree.i: src/kdtree.cpp.i
-.PHONY : src/kdtree.i
-
-# target to preprocess a source file
-src/kdtree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/kdtree.cpp.i
-.PHONY : src/kdtree.cpp.i
-
-src/kdtree.s: src/kdtree.cpp.s
-.PHONY : src/kdtree.s
-
-# target to generate assembly for a file
-src/kdtree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/kdtree.cpp.s
-.PHONY : src/kdtree.cpp.s
-
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -240,9 +216,6 @@ help:
 	@echo "... src/KDTree.o"
 	@echo "... src/KDTree.i"
 	@echo "... src/KDTree.s"
-	@echo "... src/kdtree.o"
-	@echo "... src/kdtree.i"
-	@echo "... src/kdtree.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

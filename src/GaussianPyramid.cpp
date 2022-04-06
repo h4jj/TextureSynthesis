@@ -28,19 +28,19 @@ void GaussianPyramid::printPyramid() {
     }
 }
 
-void GaussianPyramid::showEachStage() {
+// void GaussianPyramid::showEachStage() {
 
-    for(const auto level : pyramid) {
-        cout << "rows: " << level.rows << " cols: " << level.cols << endl;
-        imshow( window_name, level );
-        char c = (char)waitKey(0);
-        if( c == 27 )
-        { continue; }
-    }
-}
+//     for(const auto level : pyramid) {
+//         cout << "rows: " << level.rows << " cols: " << level.cols << endl;
+//         imshow( window_name, level );
+//         char c = (char)waitKey(0);
+//         if( c == 27 )
+//         { continue; }
+//     }
+// }
 
-void GaussianPyramid::showSingleStage(Mat level) {
-    cout << "rows: " << level.rows << " cols: " << level.cols << endl;
-    imshow( window_name, level );
-    while((char)waitKey(0) != 27);
-}
+// void GaussianPyramid::showSingleStage(Mat level) {
+//     cout << "rows: " << level.rows << " cols: " << level.cols << endl;
+//     imshow( window_name, level );
+//     while((char)waitKey(0) != 27);
+// }

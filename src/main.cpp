@@ -1,5 +1,5 @@
 #include <fstream>
-#include <Eigen/Core>
+#include "Eigen/Core"
 #include <vector>
 #include <thread>
 #include <chrono>
@@ -214,7 +214,7 @@ void singleResolutionSynthesis() {
     int width2, height2, bpp2;
     const int nbGrid = 9;
 
-    Color** inputColorData = readImage("../imgs/texture1.png", width, height, bpp);
+    Color** inputColorData = readImage("../imgs/textureSC.png", width, height, bpp);
     uint8_t* outputData = readFile("../imgs/noiseTexture.png", width2, height2, bpp2);
     Color** outputColorData = readImage("../imgs/noiseTexture.png", width2, height2, bpp2);
 
@@ -548,7 +548,7 @@ void buildSearchBookFlattened(std::vector<std::vector<double>>& searchbook, std:
 void multiResolutionSynthesis() {
     double searching_time = 0.0f;
 
-    const char* filename1 = "../imgs/texture1.png";
+    const char* filename1 = "../imgs/textureSC.png";
     const char* filename2 = "../imgs/noiseTexture.png";
     const int nbGrid = 5;
     
@@ -690,7 +690,7 @@ int main(int argc, char** argv) {
 
     singleResolutionSynthesis(); // 9x9
     multiResolutionSynthesis(); // 5x5
-    multiResolutionSynthesisTSVQ(); // 5x5
+    // multiResolutionSynthesisTSVQ(); // 5x5
 
     return EXIT_SUCCESS;
 }
