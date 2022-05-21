@@ -1,4 +1,4 @@
-$ Texture Synthesis - Based off [TSVQ by Wei and Levoy](https://graphics.stanford.edu/papers/texture-synthesis-sig00/texture.pdf)
+# Texture Synthesis - Based off [TSVQ by Wei and Levoy](https://graphics.stanford.edu/papers/texture-synthesis-sig00/texture.pdf)
 
 The main function currently has 3 methods running if you wish to run each variation 
 separately (single , multi, multi + TSVQ) simply comment out the methods and leave the desired
