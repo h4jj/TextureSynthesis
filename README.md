@@ -2,7 +2,15 @@
 
 The main function currently has 3 methods running if you wish to run each variation 
 separately (single , multi, multi + TSVQ) simply comment out the methods and leave the desired
-one uncommented. In order to change the neighborhood sizes, at the top of each of the methods
+one uncommented. 
+
+```bash
+# SingleResolutionSynthesis()
+# MultiResolutionSynthesis
+# MultiResolutionSynthesisTSVQ()
+```
+
+In order to change the neighborhood sizes, at the top of each of the methods
 is an integer value "const int nbGrid = N". Changing N into your desired value will construct an
 NxN neighborhood, everything else is setup perfectly.
 
