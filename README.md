@@ -6,7 +6,7 @@ one uncommented.
 
 ```bash
 # SingleResolutionSynthesis()
-# MultiResolutionSynthesis
+# MultiResolutionSynthesis() 
 # MultiResolutionSynthesisTSVQ()
 ```
 
